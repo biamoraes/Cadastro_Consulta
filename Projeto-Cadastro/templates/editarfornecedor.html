@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company</title>
+    <link rel="stylesheet" href="/static/styles/editar2.css">
+</head>
+<body>
+    <nav>
+        <a href="/voltar2" class="link_voltar2">voltar</a>
+    </nav>
+    <div class="container">
+        <h2>Editar Fornecedor</h2>
+        <form method="POST" action="/editar2/{{ fornecedor[0] }}" enctype="multipart/form-data">
+            <div class="tabela">
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome" placeholder="Digite seu nome ou razão social" required value="{{ fornecedor[1] }}">
+            </div>
+
+            <div class="tabela">
+                <label for="email">E-mail:</label>
+                <input type="text" name="email" placeholder="Digite seu e-mail" required value="{{ fornecedor[2] }}">
+            </div>
+
+            <div class="tabela">
+                <label for="telefone">Telefone:</label>
+                <input type="tel" name="telefone" placeholder="Digite seu telefone" required value="{{ fornecedor[3] }}">
+            </div>
+
+            <div class="tabela">
+                <label for="site">Site:</label>
+                <input type="text" name="site" placeholder="Digite seu site" required value="{{ fornecedor[4] }}">
+            </div>
+
+            <div class="tabela">
+                <label for="estado">Estado:</label>
+                <input type="text" name="estado" placeholder="Digite seu estado" required value="{{ fornecedor[7] }}">
+            </div>
+
+            <div class="tabela">
+                <label for="cidade">Cidade:</label>
+                <input type="text" name="cidade" placeholder="Digite sua cidade" required value="{{ fornecedor[8] }}">
+            </div>
+
+            <div class="tabela">
+                <label for="rua">Rua:</label>
+                <input type="text" name="rua" placeholder="Digite sua rua" required value="{{ fornecedor[9] }}">
+            </div>
+
+            <div class="tabela">
+                <label for="numero">N° da residência:</label>
+                <input type="number" name="numero" placeholder="Digite seu número" required value="{{ fornecedor[10] }}">
+            </div>
+
+            <div class="tabela">
+                <label for="data_cadastro">Data de cadastro:</label>
+                <input type="date" name="data_cadastro" required value="{{ fornecedor[6] }}">
+            </div>
+
+            <div class="tabela">
+                <label for="cnpj">Cadastro Nacional da Pessoa Jurídica:</label>
+                <input type="number" name="cnpj" placeholder="Digite seu CNPJ" required value="{{ fornecedor[5] }}">
+            </div>
+            <div class="button">
+                <button type="submit">Salvar</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

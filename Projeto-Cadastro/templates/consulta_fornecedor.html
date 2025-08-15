@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company</title>
+    <link rel="stylesheet" href="/static/styles/estilo5.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="/home">Home</a></li>
+            <li><a href="/cadastro2">Cadastro de Fornecedores</a></li>
+            <li><a href="/consulta2">Consulta de Fornecedores</a></li>
+            <li><a href="/cadastro1"></a></li>
+            <li><a href="/consulta1"></a></li>
+        </ul>
+    </nav>
+
+    <div class="table-container">
+        <div class="search-box">
+            <input type="text" class="search-txt" placeholder="Buscar...">
+            <a href="#" class="search-btn">
+                <img src="/static/assets/lupa.png" alt="Lupa" height="15px" width="15px">
+            </a>  
+        </div>
+        <table>
+            <div>
+                <h2 class="animate__animated animate__zoomIn">Faça sua consulta</h2>
+            </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>E-mail</th>
+                    <th>Telefone</th>
+                    <th>Opções</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for fornecedor in fornecedores %}
+                <tr>
+                    <td>{{ fornecedor[0] }}</td> 
+                    <td>{{ fornecedor[1] }}</td> 
+                    <td>{{ fornecedor[2] }}</td> 
+                    <td>{{ fornecedor[3] }}</td> 
+                    <td>
+                        <a href="/editar2/{{ fornecedor[0] }}" class="link_editar">Editar</a>
+                        <a href="/excluir2/{{ fornecedor[0] }}" class="link_excluir">Excluir</a>
+                        <a href="/ver2/{{ fornecedor[0] }}" class="link_ver">Ver</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>            
+        </table>
+    </div>
+</body>
+</html>

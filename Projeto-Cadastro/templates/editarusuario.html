@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company</title>
+    <link rel="stylesheet" href="/static/styles/editar3.css">
+</head>
+<body>
+    <nav>
+        <a href="/voltar3" class="link_voltar3">voltar</a>
+    </nav>
+    <div class="container">
+        <h2>Editar Usuário</h2>
+        <form method="POST" action="/editar3/{{ usuario[0] }}" enctype="multipart/form-data">
+            <div class="tabela">
+                <label for="nome_usuario">Nome:</label>
+                <input type="text" name="nome_usuario" placeholder="Digite seu nome ou razão social" required value="{{ usuario[1] }}">
+            </div>
+
+            <div class="tabela">
+                <label for="usuario">Usuário:</label>
+                <input type="text" name="usuario" placeholder="Digite seu Usuário" required value="{{ usuario[2] }}">
+            </div>
+
+            <div class="tabela">
+                <label for="senha">Senha:</label>
+                <input type="tel" name="senha" placeholder="Digite sua senha" required value="{{ usuario[3] }}">
+            </div>
+            
+            <div class="tabela">
+                <!-- Ícone ou foto que servirá como botão -->
+                    <label for="imagem">Imagem</label>
+                    <div class="input-file-container">
+                        <input type="file" id="imagem" name="imagem" accept="image/*">
+                        <label for="imagem" class="input-file-label">
+                            <i class="fas fa-camera"></i>
+                        </label>
+                    </div>
+                </div>
+            <div class="button">
+                <button type="submit">Salvar</button>
+            </div>
+        </form
+    </div>
+</body>
+</html>

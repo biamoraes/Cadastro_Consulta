@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company</title>
+    <link rel="stylesheet" href="/static/styles/editar.css">
+</head>
+<body>
+    <nav>
+        <a href="/voltar" class="link_voltar">voltar</a>
+    </nav>
+        <div class="container">
+            <h2>Ver Dados</h2>
+            <div class="tabela">
+                <label>Nome:</label>
+                <span>{{ cliente[1] }}</span>
+            </div>
+            <div class="tabela">
+                <label>E-mail:</label>
+                <span>{{ cliente[2] }}</span>
+            </div>
+            <div class="tabela">
+                <label>Telefone:</label>
+                <span>{{ cliente[3] }}</span>
+            </div>
+            <div class="tabela">
+                <label>Data de cadastro:</label>
+                <span>{{ cliente[4] }}</span>
+            </div>
+
+            <div class="tabela">
+                <label for="cpf">CPF:</label>
+                <span>{{ cliente[5] }}</span>
+            </div>
+
+            <div class="tabela">
+                <label for="cep">CEP:</label>
+                <span>{{ cliente[6] }}</span>
+            </div>
+
+            <div class="tabela">
+                <label for="estado">Estado:</label>
+                <span>{{ cliente[7] }}</span>
+            </div>
+
+            <div class="tabela">
+                <label for="cidade">Cidade:</label>
+                <span>{{ cliente[8] }}</span>
+            </div>
+
+            <div class="tabela">
+                <label for="rua">Rua</label>
+                <span>{{ cliente[9] }}</span>
+            </div>
+
+            <div class="tabela">
+                <label for="numero">N° da residencia:</label>
+                <span>{{ cliente[10] }}</span>
+            </div>      
+        </form>
+    </div>
+</body>
+</html>

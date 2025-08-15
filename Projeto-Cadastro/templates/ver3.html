@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company</title>
+    <link rel="stylesheet" href="/static/styles/ver.css">
+</head>
+<body>
+    <nav>
+        <a href="/ver3"></a>
+        <a href="/voltar3" class="link_voltar3">voltar</a>
+    </nav>
+        <div class="container">
+            <h2>Ver Dados</h2>
+            <div class="tabela">
+                <label>Nome:</label>
+                <span>{{ usuario[1] }}</span>
+            </div>
+
+            <div class="tabela">
+                <label>Usuário:</label>
+                <span>{{ usuario[2] }}</span>
+            </div>
+
+            <div class="tabela">
+                <label>Senha:</label>
+                <span>{{ usuario[3] }}</span>
+            </div>
+
+            <div class="tabela">
+                <label>Imagem:</label>
+                <!-- Verificação para garantir que a imagem não seja None -->
+                <img src="{{ url_for('static', filename='assets/' + (usuario[4] if usuario[4] else 'default.jpg')) }}" alt="Imagem de {{ usuario[1] }}" style="width: 100px; height: auto;">
+            </div>
+            
+ 
+        </form>
+    </div>
+</body>
+</html>

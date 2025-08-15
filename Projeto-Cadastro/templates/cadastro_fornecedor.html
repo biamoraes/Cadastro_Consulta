@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company</title>
+    <link rel="stylesheet" href="/static/styles/estilo3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/home">Home</a></li>
+            <li><a href="/cadastro2">Cadastro de Fornecedores</a></li>
+            <li><a href="/consulta2">Consulta de Fornecedores</a></li>
+            <li><a href="/cadastro1"></a></li>
+            <li><a href="/consulta1"></a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <div class="conteudo animate__animated animate__fadeInUp">
+            <h2 class="animate__animated animate__fadeInDown">Cadastro de Fornecedores</h2>
+            <form action="/mandar" method="post" enctype="multipart/form-data">
+                <div class="campo-form"> 
+                    <label for="nome">Nome:</label>
+                    <input type="text" name="nome" placeholder="Digite seu nome ou razão social" required>
+                </div>
+
+                <div class="campo-form">
+                    <label for="cnpj">Cadastro Nacional da Pessoa Jurídica:</label>
+                    <input type="number" name="cnpj" placeholder="Digite seu CNPJ" required>
+                </div>
+
+                <div class="campo-form">
+                    <label for="email">E-mail:</label>
+                    <input type="text" name="email" placeholder="Digite seu e-mail" required>
+                </div>
+
+                <div class="campo-form">
+                    <label for="site">Site:</label>
+                    <input type="text" name="site" placeholder="Digite seu site" required>
+                </div>
+
+                <div class="campo-form">
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" name="telefone" placeholder="Digite seu telefone" required>
+                </div>
+
+                <div class="campo-form">
+                    <label for="estado">Estado:</label>
+                    <input type="text" name="estado" placeholder="Digite seu estado" required>
+                </div>
+
+                <div class="campo-form">
+                    <label for="cidade">Cidade:</label>
+                    <input type="text" name="cidade" placeholder="Digite sua cidade" required>
+                </div>
+
+                <div class="campo-form">
+                    <label for="rua">Rua:</label>
+                    <input type="text" name="rua" placeholder="Digite sua rua" required>
+                </div>
+
+                <div class="campo-form">
+                    <label for="numero">N° da residência:</label>
+                    <input type="text" name="numero" placeholder="Digite o número da residência" required>
+                </div>
+
+                <div class="campo-form">
+                    <label for="data_cadastro">Data de cadastro:</label>
+                    <input type="date" name="data_cadastro" placeholder="Digite a data que está sendo cadastrado" required>
+                </div>
+
+                <div class="campo-form">
+                    <button type="submit">Enviar</button>
+                </div>
+            </form>
+        </div>
+        <div class="green-square"></div> 
+    </div>
+</body>
+</html>

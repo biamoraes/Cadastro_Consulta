@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company</title>
+    <link rel="stylesheet" href="/static/styles/editar.css">
+</head>
+<body>
+    <nav>
+        <a href="/voltar" class="link_voltar">voltar</a>
+    </nav>
+ 
+    <div class="container">
+        <h2>Editar Cliente</h2>
+        <form method="POST" action="/editar/{{ cliente[0] }}" enctype="multipart/form-data">
+            <div class="tabela">
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome" placeholder="Digite seu nome completo" required value="{{ cliente[1] }}">
+            </div>
+
+            <div class="tabela">
+                <label for="cpf">Cadastro de Pessoas Físicas:</label>
+                <input type="number" name="cpf" placeholder="Digite seu CPF" required value="{{ cliente[5] }}">
+                <span id="cpf-error" class="error-message" style="display: none;"></span>
+            </div>
+
+            <div class="tabela">
+                <label for="email">E-mail:</label>
+                <input type="text" name="email" placeholder="Digite seu e-mail" required value="{{ cliente[2] }}">
+            </div>
+
+            <div class="tabela">
+                <label for="telefone">Telefone:</label>
+                <input type="tel" name="telefone" placeholder="Digite seu telefone" required value="{{ cliente[3] }}">
+            </div>
+
+            <div class="tabela">
+                <label for="cep">Cep:</label>
+                <input type="number" name="cep" placeholder="Digite seu Cep" required value="{{ cliente[6] }}">
+            </div>
+
+            <div class="tabela">
+                <label for="estado">Estado:</label>
+                <input type="text" name="estado" placeholder="Digite seu estado" required value="{{ cliente[7] }}">
+            </div>
+
+            <div class="tabela">
+                <label for="cidade">Cidade:</label>
+                <input type="text" name="cidade" placeholder="Digite sua cidade" required value="{{ cliente[8] }}">
+            </div>
+
+            <div class="tabela">
+                <label for="rua">Rua:</label>
+                <input type="text" name="rua" placeholder="Digite sua rua" required value="{{ cliente[9] }}">
+            </div>
+
+            <div class="tabela">
+                <label for="numero">N° da residência:</label>
+                <input type="text" name="numero" placeholder="Digite o número da residência" required value="{{ cliente[10] }}">
+            </div>
+
+
+            <div class="tabela">
+                <label for="data_cadastro">Data de cadastro:</label>
+                <input type="date" name="data_cadastro" placeholder="Digite a data que está sendo cadastrado" required value="{{ cliente[4] }}">
+            </div>
+
+            <div class="button">
+                <button type="submit">Salvar</button>
+            </div> 
+        </form>
+    </div>
+</body>
+</html>

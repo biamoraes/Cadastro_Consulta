@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oswald:wght@200..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Signika:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+ 
+/* Estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+ 
+body, html {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Dosis', cinzel;
+    background-image: url('/static/assets/principal.png');
+    background-size: cover;
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Não repete a imagem */
+    background-attachment: fixed; /* A imagem não se move com o conteúdo */
+}
+ 
+/* Navegação */
+nav {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-family: 'Quicksand', cinzel;
+    font-weight: 100;
+}
+ 
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+ 
+nav ul li {
+    display: inline;
+}
+ 
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+ 
+nav ul li a:hover {
+    color: #307755;
+}
+ 
+/* Conteúdo do formulário */
+.conteudo {
+    margin-right: 800px;
+    background-color: #ffffff;
+    padding: 60px;
+    padding-top: 5px;
+    width: 400px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+ 
+/* Título do formulário */
+.conteudo h2 {
+    font-size: 1.8em;
+    color: #307755;
+    margin-bottom: 20px;
+    line-height: 4;
+    font-family: 'Nunito', cinzel;
+ 
+}
+ 
+/* Campo do formulário */
+.campo-form {
+    margin-bottom: 20px;
+    text-align: left;
+}
+ 
+.campo-form label {
+    display: block;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+ 
+.campo-form input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background-color: #f2f2f2;
+    border-radius: 20px;
+    font-size: 1em;
+    color: #666;
+    outline: none;
+    font-family: 'Dosis', cinzel;
+}
+ 
+/* Botão de envio */
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #00c853;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+ 
+button[type="submit"]:hover {
+    background-color: #00b248;
+}
+
+

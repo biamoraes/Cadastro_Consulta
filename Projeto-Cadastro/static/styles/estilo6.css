@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+body {
+    font-family: 'Quicksand', sans-serif;
+    background: linear-gradient(to right, #b7d1b5, #6BA45A);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    justify-content: flex-start;
+}
+
+/* Seção do título e imagem de perfil */
+.top-section {
+    display: flex;
+    justify-content: space-between; /* Alinha a foto e o título */
+    align-items: center;
+    width: 100%;
+    margin: 20px 0;
+    padding: 0 50px; /* Adiciona espaçamento lateral */
+}
+
+/* Estilo para o título - .perfil1 */
+.perfil1 {
+    font-size: 50px; /* Aumentado para 50px */
+    margin-bottom: 0; /* Remove o espaçamento abaixo */
+    text-align: center;
+    position: relative;
+    top: 50px; /* Move o título mais para baixo */
+    margin-left: 240px;
+}
+
+/* Estilo para a imagem de perfil - .perfil */
+.perfil {
+    position: relative;
+    top: 50px; /* Ajuste para manter a distância */
+}
+
+.imagem-perfil {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    object-fit: cover;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Container dos cards */
+.container {
+    display: flex;
+    gap: 60px; /* Espaçamento horizontal entre os cards */
+    justify-content: center; /* Centraliza os cards horizontalmente */
+    align-items: center; /* Centraliza os cards verticalmente */
+    width: 100%;
+    margin-top: 150px; /* Aumentado para descer os cards */
+}
+
+.card_1, .card_2, .card_3 {
+    border-radius: 15px;
+    width: 400px;  
+    height: 400px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-image: url('/static/assets/Silver\ Minimalist\ 100K\ Thank\ You\ Followers\ Instagram\ Post.png');
+    background-size: cover;
+    background-position: center;
+    color: #e5e5e5;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card_1 h3, .card_2 h3, .card_3 h3 {
+    position: absolute;
+    z-index: 1;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 24px; /* Aumentado de 20px para 24px */
+    color: #e5e5e5;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card_1 a, .card_2 a, .card_3 a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    text-decoration: none;
+}
+
+.card_1:hover, .card_2:hover, .card_3:hover {
+    transform: scale(1.1);
+}
+
+/* Botão de logout */
+.logout-button {
+    margin-top: 40px; /* Ajustado para manter o botão no mesmo lugar */
+    align-self: flex-end; /* Alinha o botão à direita */
+    margin-right: 50px; /* Adiciona espaçamento à direita */
+}
+
+button {
+    position: absolute;
+    top: 690px;
+    left: 1370px;
+    padding: 8px 12px;
+    background-color: #406236;
+    color: white;
+    font-size: 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #4c8a48;
+}

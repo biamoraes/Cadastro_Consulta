@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingoude Company</title>
+    <link rel="stylesheet" href="/static/styles/estilo6.css">
+</head>
+<body>
+    <main>
+        <div class="top-section">
+            <div class="perfil1">
+                <p>Bem-vindo(a) {{nome_usuario[1]}}</p>
+            </div>
+            <div class="perfil">
+                <img src="/static/assets/{{nome_usuario[4]}}" alt="" class="imagem-perfil">
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="card_1">
+                <a href="/cadastro1">
+                    <h3>Cadastre-se como<br>cliente</h3>
+                </a>
+            </div>
+
+            <div class="card_2">
+                <a href="/cadastro2">
+                    <h3>Cadastre-se como<br>fornecedor</h3>
+                </a>
+            </div>
+
+            <div class="card_3">
+                <a href="/cadastro3">
+                    <h3>Cadastre-se como<br>usuário</h3>
+                </a>
+            </div>
+        </div>
+
+        <form action="/logout" method="post" class="logout-button">
+            <button type="submit">Sair</button>
+        </form>
+    </main>
+</body>
+</html>

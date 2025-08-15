@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company</title>
+    <link rel="stylesheet" href="/static/styles/estilo8.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/home">Home</a></li>
+            <li><a href="/cadastro3">Cadastro de Usuários</a></li>
+            <li><a href="/consulta3">Consulta de Usuários</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="green-square"></div>
+        <div class="conteudo animate__animated animate__fadeInUp">
+            <h2 class="animate__animated animate__fadeInDown">Cadastro de Usuários</h2>
+            <form action="/lancar" method="post" enctype="multipart/form-data">
+                <div class="campo-form"> 
+                    <label for="nome_usuario">Nome:</label>
+                    <input type="text" name="nome_usuario" placeholder="Digite seu nome" required>
+                </div>
+
+                <div class="campo-form"> 
+                    <label for="usuario">Usuário:</label>
+                    <input type="text" name="usuario" placeholder="Digite seu Usuário" required>
+                </div>
+
+                <div class="campo-form">
+                    <label for="senha">Senha:</label>
+                    <input type="password" name="senha" placeholder="Digite sua senha" required>
+                </div>
+
+                <div class="campo-form">
+                    <label for="imagem">Imagem:</label>
+                    <div class="input-file-container">
+                        <input type="file" name="imagem" id="imagem" accept="image/*" required onchange="previewImage(event)">
+                        <label for="imagem" class="input-file-label">
+                            <i class="fas fa-upload"></i>
+                        </label>
+                    </div>
+                    <div class="image-preview" id="imagePreview">
+                        <img id="previewImg" alt="Preview">
+                    </div>
+                </div>
+
+                <div class="campo-form">
+                    <button type="submit">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function previewImage(event) {
+            const previewContainer = document.getElementById('imagePreview');
+            const previewImage = document.getElementById('previewImg');
+
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+
+                reader.onload = function(e) {
+                    previewImage.src = e.target.result;
+                    previewContainer.style.display = 'flex';
+                };
+
+                reader.readAsDataURL(file);
+            } else {
+                previewContainer.style.display = 'none';
+                previewImage.src = '';
+            }
+        }
+    </script>
+</body>
+</html>

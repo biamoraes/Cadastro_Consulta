@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oswald:wght@200..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Signika:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+/* Estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+body, html {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Dosis', cinzel;
+    background-image: url('/static/assets/principal.png');
+    background-size: cover;
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Não repete a imagem */
+    background-attachment: fixed; /* A imagem não se move com o conteúdo */
+}
+
+
+/* Conteúdo do formulário */
+.conteudo {
+    margin-right: 800px;
+    background-color: #ffffff;
+    padding: 40px; /* Reduzido para deixar o form mais compacto */
+    padding-top: 5px;
+    width: 350px; /* Diminuído para ajustar o tamanho do formulário */
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Título do formulário */
+.conteudo h2 {
+    font-size: 1.6em; /* Diminuído para se ajustar ao novo tamanho do form */
+    color: #307755;
+    margin-bottom: 20px;
+    line-height: 1.5; /* Ajustado para melhorar a legibilidade */
+    font-family: 'Nunito', cinzel;
+}
+
+/* Campo do formulário */
+.campo-form {
+    margin-bottom: 15px; /* Diminuição do espaço entre os campos */
+    text-align: left;
+}
+
+.campo-form label {
+    display: block;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.campo-form input {
+    width: 100%;
+    padding: 10px; /* Menor padding para reduzir o tamanho dos campos */
+    border: none;
+    background-color: #f2f2f2;
+    border-radius: 20px;
+    font-size: 0.95em; /* Ajustado para ser mais compacto */
+    color: #666;
+    outline: none;
+    font-family: 'Dosis', cinzel;
+}
+
+/* Botão de envio */
+button[type="submit"] {
+    width: 100%;
+    padding: 10px; /* Menor padding para um botão mais compacto */
+    background-color: #00c853;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #00b248;
+}
+
+.container-imagem-perfil {
+    position: relative;
+    width: 100px; /* Reduzido para ajustar o tamanho da imagem */
+    height: 100px;
+    margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.container-imagem-perfil img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    border: 2px solid #307755;
+}
+
+.container-imagem-perfil img:hover {
+    transform: scale(1.05);
+}
+
+.label-upload {
+    position: absolute;
+    bottom: -8px; /* Ajustado para alinhar melhor com a imagem */
+    right: -8px;
+    background-color: #307755;
+    color: white;
+    border-radius: 50%;
+    padding: 6px; /* Menor padding */
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    display: none;
+}
+
+.label-upload:hover {
+    background-color: #219653;
+}
+

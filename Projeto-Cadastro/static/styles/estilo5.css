@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oswald:wght@200..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Signika:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background: linear-gradient(90deg, #C8C8C8, #6BA45A);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 50px;
+}
+
+nav {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 70px;
+    margin-left: 50px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    font-size: 18px;
+    transition: background-color 0.3s, transform 0.3s; /* Transições suaves */
+}
+
+nav ul li a:hover {
+    background-color: #6f8a7a; /* Tom de roxo mais claro para hover */
+    border-radius: 5px;
+    transform: scale(1.1); /* Aumento no hover */
+}
+
+.table-container {
+    max-width: 100%;
+    padding: 20px; /* Reduza o padding para subir o conteúdo */
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    margin-top: 60px; /* Reduza o margin-top para subir o container */
+    margin-bottom: 50px;
+    overflow-x: auto;
+}
+ 
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza horizontalmente */
+    gap: 30px; /* Espaço entre o título e a barra de pesquisa */
+    margin-bottom: 20px; /* Espaço abaixo do cabeçalho */
+}
+ 
+.header-container h2 {
+    font-size: 24px;
+    color: #27632a;
+    margin: 0; /* Remove a margem superior padrão */
+}
+ 
+h2 {
+    font-size: 24px;
+    line-height: 2.5;
+    color: #27632a;
+    padding-right: 90px;
+    padding-top: -10px;
+}
+ 
+.search-box{
+    position: absolute;
+    background: #2b4930;
+    height: 35px;
+    padding: 10px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 230px;
+    margin-top: 15px;
+}
+ 
+.search-txt{
+    border: none;
+    background: none;
+    outline: none;
+    color: #f0f0f0;
+    padding: 0;
+    font-size: 16px;
+    line-height: 40px;
+    width: 0;
+    transition: 0.5s ;
+}
+ 
+::-webkit-input-placeholder{
+    color: #3d90566e;
+}
+ 
+.search-btn{
+    border-radius: 50%;
+    background:#2b4930;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+ 
+.search-box:hover > .search-txt {
+    width: 240px;
+    padding: 0 6px;
+ 
+}
+ 
+.search-box:hover > .search-btn{
+    background: #C8C8C8;
+    height: 23px;
+    width: 23px;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    
+}
+
+thead {
+    background-color: #27632a;
+    color: white;
+}
+
+thead th {
+    padding: 20px;
+    text-align: left;
+}
+
+tbody td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+tbody tr:hover {
+    background-color: #f0f0f0;
+}
+
+.link_editar {
+    color: #4caf50;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.link_excluir {
+    color: #f44336;
+    text-decoration: none;
+}
+.link_ver {
+    color: #0707a1;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.link_editar:hover,
+.link_excluir:hover,
+.link_ver:hover {
+    text-decoration: underline;
+    opacity: 0.8;
+}

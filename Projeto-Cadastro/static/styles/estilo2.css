@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(90deg, #C8C8C8, #6BA45A);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 50px;
+}
+
+nav {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 70px;
+    margin-left: 50px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    font-size: 18px;
+    transition: background-color 0.3s, transform 0.3s; /* Transições suaves */
+}
+
+nav ul li a:hover {
+    background-color: #6f8a7a; /* Tom de roxo mais claro para hover */
+    border-radius: 5px;
+    transform: scale(1.1); /* Aumento no hover */
+}
+
+.container {
+    display: flex;
+    justify-content: space-between; /* Alinhamento horizontal dos filhos */
+    align-items: flex-start; /* Alinha os filhos no início */
+    gap: 150px; /* Espaço entre os elementos */
+    margin-top: 100px;
+}
+
+.green-square {
+    width: 500px;
+    height: 500px;
+    background-color: #2e7d32;
+    border-radius: 15px;
+    background-image: url('/static/assets/greensquare.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.green-square:hover{
+    transform: scale(1.1); /* Ampliação de 5% */
+    transition: transform 0.3s ease;
+}
+
+.conteudo {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    width: 500px; /* Ajuste a largura para corresponder ao layout desejado */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-left: 110px;
+}
+
+.conteudo h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #2a4730;
+    font-family: 'Dosis', sans-serif;
+    font-weight: bold;
+}
+
+.campo-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Dosis', cinzel;
+    margin-bottom: 15px; /* Adicione um espaço entre os campos */
+}
+
+.campo-form label {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.campo-form input[type="text"],
+.campo-form input[type="date"],
+.campo-form input[type="tel"],
+.campo-form input[type="number"] {
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 15px;
+    background: #f5f5f5;
+    font-size: 14px;
+    font-family: 'Dosis', sans-serif;
+}
+
+.campo-form input:hover {
+    border-color: #000000;
+    background-color: #c6edcd;
+}
+
+button[type="submit"] {
+    padding: 12px;
+    background: #588e6d;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button[type="submit"]:hover {
+    background: #466d55;
+}
+
+

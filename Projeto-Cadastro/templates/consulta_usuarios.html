@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company</title>
+    <link rel="stylesheet" href="/static/styles/estilo4.css">
+</head>
+ 
+<body>
+    <nav>
+        <ul>
+            <li><a href="/home">Home</a></li>
+            <li><a href="/cadastro3">Cadastro de Usuários</a></li>
+            <li><a href="/consulta3">Consulta de Usuários</a></li>
+        </ul>
+        
+    </nav>
+ 
+    <div class="table-container">
+        <div class="search-box">
+            <input type="text" class="search-txt" placeholder="Buscar...">
+            <a href="#" class="search-btn">
+                <img src="/static/assets/lupa.png" alt="Lupa" height="15px" width="15px">
+            </a>  
+        </div>
+        <table>
+            <div>
+                <h2 class="animate__animated animate__zoomIn">Faça sua consulta</h2>
+            </div>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Usuário</th>
+                    <th>Imagem</th>
+                    <th>Opções</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for usuario in usuarios %}
+                <tr>
+                    <td>{{ usuario[0] }}</td>
+                    <td>{{ usuario[1] }}</td>
+                    <td>{{ usuario[2] }}</td>
+                    <td>
+                        <img src="{{ url_for('static', filename='assets/' + (usuario[4] if usuario[4] else 'default.jpg')) }}" alt="Imagem de {{ usuario[1] }}" style="width: 50px; height: auto;">
+                    </td>
+                    <td>
+                        <a href="/editar3/{{ usuario[0] }}" class="link_editar">Editar</a>
+                        <a href="/excluir3/{{ usuario[0] }}" class="link_excluir">Excluir</a>
+                        <a href="/ver3/{{ usuario[0] }}" class="link_ver">Ver</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>            
+        </table>
+    </div>
+</body>
+</html>
+ 
+ 
